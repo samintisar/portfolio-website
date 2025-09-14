@@ -45,7 +45,7 @@ export default function Home() {
             THE FUTURE
           </h1>
           <p className="text-xl md:text-2xl mb-12 text-muted-foreground max-w-3xl mx-auto">
-            Cyberpunk Developer | Full-Stack Engineer | Digital Architect
+            Samin Intisar | Full-Stack Engineer | Digital Architect
           </p>
           <div className="flex gap-6 justify-center flex-wrap">
             <Link href="/projects">
