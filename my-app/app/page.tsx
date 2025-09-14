@@ -4,6 +4,7 @@ import { Button } from "@/components/retroui/Button";
 import { Card } from "@/components/retroui/Card";
 import { Badge } from "@/components/retroui/Badge";
 import { Input } from "@/components/retroui/Input";
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 export default function Home() {
@@ -47,9 +48,11 @@ export default function Home() {
             Cyberpunk Developer | Full-Stack Engineer | Digital Architect
           </p>
           <div className="flex gap-6 justify-center flex-wrap">
-            <Button className="text-lg px-8 py-4 cyber-border neon-glow">
-              VIEW PROJECTS
-            </Button>
+            <Link href="/projects">
+              <Button className="text-lg px-8 py-4 cyber-border neon-glow">
+                VIEW PROJECTS
+              </Button>
+            </Link>
             <Button variant="secondary" className="text-lg px-8 py-4">
               DOWNLOAD CV
             </Button>
