@@ -36,7 +36,7 @@ export default function Home() {
   return (
     <div className="min-h-[110vh] grid-background scan-lines">
       {/* Hero Section */}
-      <section className="pt-20 pb-20 px-6">
+      <section className="flex items-center justify-center px-6" style={{ height: 'calc(110vh - 60px)' }}>
         <div className="container mx-auto text-center">
           <h1 className="text-6xl md:text-8xl font-head mb-8 neon-glow text-primary">
             WELCOME TO
