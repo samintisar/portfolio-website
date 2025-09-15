@@ -39,7 +39,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="flex items-center justify-center px-6" style={{ height: 'calc(110vh - 60px)' }}>
         <div className="container mx-auto text-center">
-          <h1 className="text-6xl md:text-8xl font-head mb-8 neon-glow text-primary">
+          <h1 className="text-6xl md:text-8xl font-head mb-8 text-primary text-render-precision leading-tight tracking-tighter font-black text-shadow neon-glow-subtle">
             WELCOME TO
             <br />
             THE FUTURE
@@ -51,7 +51,7 @@ export default function Home() {
           </p>
           <div className="flex gap-6 justify-center flex-wrap">
             <Link href="/projects">
-              <Button className="text-lg px-8 py-4 cyber-border neon-glow">
+              <Button className="text-lg px-8 py-4 cyber-border font-bold text-render-legible tracking-wide text-shadow">
                 VIEW PROJECTS
               </Button>
             </Link>
