@@ -50,7 +50,7 @@ const dataAnalystProjects = [
     title: "Disaster Tweet Classification",
     description: "A machine learning model that classifies tweets as disaster-related or not",
     techStack: ["Python", "Hugging Face", "Keras", "DistilBERT", "PyTorch"],
-    thumbnail: "/api/placeholder/400/250"
+    thumbnail: "/Disaster Tweets Classification.png"
   }
 ];
 
