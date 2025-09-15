@@ -18,7 +18,7 @@ const space = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Cyberpunk Portfolio",
+  title: "Samin Intisar Portfolio",
   description: "A retro-futuristic portfolio with cyberpunk aesthetics",
 };
 
@@ -30,11 +30,21 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={`${archivoBlack.variable} ${space.variable} antialiased`}>
+        {/* Skip Navigation Links */}
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
+        <a href="#footer" className="skip-link">
+          Skip to footer
+        </a>
+
         <div className="min-h-screen flex flex-col">
-          <div className="flex-1">
+          <main id="main-content" className="flex-1">
             {children}
+          </main>
+          <div id="footer">
+            <Footer />
           </div>
-          <Footer />
         </div>
       </body>
     </html>

@@ -1,14 +1,10 @@
 "use client";
 
 import { Button } from "@/components/retroui/Button";
-import { Card } from "@/components/retroui/Card";
-import { Badge } from "@/components/retroui/Badge";
-import { Input } from "@/components/retroui/Input";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 export default function Home() {
-  const [showFooter, setShowFooter] = useState(false);
   const lastScrollYRef = useRef(0);
   const containerRef = useRef<HTMLDivElement | null>(null);
 
@@ -17,15 +13,7 @@ export default function Home() {
 
     const handleScroll = () => {
       const currentY = window.scrollY;
-      const delta = currentY - lastScrollYRef.current;
 
-      if (currentY <= 0) {
-        setShowFooter(false);
-      } else if (delta > 0) {
-        setShowFooter(true);
-      } else if (delta < 0) {
-        setShowFooter(false);
-      }
 
       lastScrollYRef.current = currentY;
     };
@@ -68,18 +56,22 @@ export default function Home() {
             THE FUTURE
           </h1>
           <p className="text-xl md:text-2xl mb-12 text-muted-foreground max-w-3xl mx-auto">
-            <Link href="/skills" className="transition-colors hover:text-secondary">
+            <Link
+              href="/skills"
+              className="transition-colors hover:text-secondary focus:text-secondary focus-cyberpunk rounded-sm px-1 py-0.5"
+              tabIndex={0}
+            >
               Samin Intisar | Full-Stack Engineer | Data Analyst
             </Link>
           </p>
           <div className="flex gap-6 justify-center flex-wrap">
             <Link href="/projects">
-              <Button className="text-lg px-8 py-4 cyber-border font-bold text-render-legible tracking-wide text-shadow">
+              <Button className="text-lg px-8 py-4 cyber-border font-bold text-render-legible tracking-wide text-shadow cyber-focus cyber-button">
                 VIEW PROJECTS
               </Button>
             </Link>
             <a href="/Samin_Intisar_Resume_v4.pdf" download="Samin_Intisar_Resume_v4.pdf">
-              <Button variant="secondary" className="text-lg px-8 py-4">
+              <Button variant="secondary" className="text-lg px-8 py-4 cyber-focus cyber-button cyber-button-secondary">
                 DOWNLOAD CV
               </Button>
             </a>
