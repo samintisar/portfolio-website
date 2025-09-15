@@ -127,12 +127,13 @@
   }
 
   /* Cursor glow that brightens only grid lines near the cursor */
-  .grid-background.glow-cursor { position: relative; }
+  .grid-background.glow-cursor { position: relative; z-index: 0; }
   .grid-background.glow-cursor::after {
     content: '';
     position: absolute;
     inset: 0;
     pointer-events: none;
+    z-index: 0;
     background-image:
       linear-gradient(rgba(196, 161, 255, 0.85) 1px, transparent 1px),
       linear-gradient(90deg, rgba(196, 161, 255, 0.85) 1px, transparent 1px);
@@ -150,6 +151,9 @@
     );
     transition: -webkit-mask-position 120ms linear, mask-position 120ms linear, filter 120ms ease;
   }
+
+  /* Ensure page content stays above the glow overlay */
+  .grid-background.glow-cursor > * { position: relative; z-index: 1; }
 
   .glitch {
     animation: glitch 2s infinite;

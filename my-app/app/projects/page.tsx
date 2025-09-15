@@ -21,7 +21,7 @@ const fullStackProjects = [
     title: "SolomindLM (In Progress)",
     description: "An AI-powered study assistant app that integrates your resources to generate personalized study materials",
     techStack: ["React", "Next.js", "LangChain", "OpenAI API", "Supabase"],
-    thumbnail: "/api/placeholder/400/250",
+    thumbnail: "/SolomindLM.png",
     githubUrl: "https://github.com/your-username/solomindlm"
   },
   {
@@ -29,7 +29,7 @@ const fullStackProjects = [
     title: "Lead Generation App",
     description: "A web application that generates leads for a business using Google Maps API and web scraping",
     techStack: ["Svelte", "Python", "Google Maps API", "BeautifulSoup"],
-    thumbnail: "/api/placeholder/400/250",
+    thumbnail: "/Lead Generation App.png",
     githubUrl: "https://github.com/your-username/lead-generation-app"
   }
 ];

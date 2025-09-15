@@ -78,9 +78,11 @@ export default function Home() {
                 VIEW PROJECTS
               </Button>
             </Link>
-            <Button variant="secondary" className="text-lg px-8 py-4">
-              DOWNLOAD CV
-            </Button>
+            <a href="/Samin_Intisar_Resume_v4.pdf" download="Samin_Intisar_Resume_v4.pdf">
+              <Button variant="secondary" className="text-lg px-8 py-4">
+                DOWNLOAD CV
+              </Button>
+            </a>
           </div>
         </div>
       </section>
