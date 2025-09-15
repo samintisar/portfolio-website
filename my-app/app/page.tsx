@@ -10,6 +10,7 @@ import { useEffect, useRef, useState } from "react";
 export default function Home() {
   const [showFooter, setShowFooter] = useState(false);
   const lastScrollYRef = useRef(0);
+  const containerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     lastScrollYRef.current = window.scrollY;
@@ -34,8 +35,30 @@ export default function Home() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  const handleMouseMove = (e: React.MouseEvent) => {
+    const el = containerRef.current;
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    el.style.setProperty("--mouse-x", `${x}px`);
+    el.style.setProperty("--mouse-y", `${y}px`);
+  };
+
+  const handleMouseLeave = () => {
+    const el = containerRef.current;
+    if (!el) return;
+    el.style.setProperty("--mouse-x", `-9999px`);
+    el.style.setProperty("--mouse-y", `-9999px`);
+  };
+
   return (
-    <div className="min-h-[110vh] grid-background scan-lines">
+    <div
+      ref={containerRef}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      className="min-h-[110vh] grid-background glow-cursor scan-lines"
+    >
       {/* Hero Section */}
       <section className="flex items-center justify-center px-6" style={{ height: 'calc(110vh - 60px)' }}>
         <div className="container mx-auto text-center">

@@ -4,6 +4,7 @@ import { Card } from "@/components/retroui/Card";
 import { Progress } from "@/components/retroui/Progress";
 import { Button } from "@/components/retroui/Button";
 import Link from "next/link";
+import { useRef } from "react";
 
 const skillSections = [
   {
@@ -75,8 +76,32 @@ const skillLevels: Record<string, number> = {
 };
 
 export default function SkillsPage() {
+  const containerRef = useRef<HTMLDivElement | null>(null);
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    const el = containerRef.current;
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    el.style.setProperty("--mouse-x", `${x}px`);
+    el.style.setProperty("--mouse-y", `${y}px`);
+  };
+
+  const handleMouseLeave = () => {
+    const el = containerRef.current;
+    if (!el) return;
+    el.style.setProperty("--mouse-x", `-9999px`);
+    el.style.setProperty("--mouse-y", `-9999px`);
+  };
+
   return (
-    <div className="min-h-screen grid-background scan-lines">
+    <div
+      ref={containerRef}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      className="min-h-screen grid-background glow-cursor scan-lines"
+    >
       <div className="container mx-auto px-6 py-12">
         <div className="mb-12">
           <div className="mb-8">

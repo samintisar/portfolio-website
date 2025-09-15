@@ -5,6 +5,7 @@ import { Card } from "@/components/retroui/Card";
 import { Badge } from "@/components/retroui/Badge";
 import Link from "next/link";
 import Image from "next/image";
+import { useRef } from "react";
 
 const fullStackProjects = [
   {
@@ -36,11 +37,11 @@ const fullStackProjects = [
 const dataAnalystProjects = [
   {
     id: 1,
-    title: "Hotel Booking Analytics",
-    description: "Power BI dashboard that provides insights into hotel bookings, revenue, and key performance metrics",
-    techStack: ["Power BI", "MySQL", "Excel"],
-    thumbnail: "/Hotel Booking Analytics.png",
-    githubUrl: "https://github.com/your-username/hotel-booking-analytics"
+    title: "Disaster Tweet Classification",
+    description: "A machine learning model that classifies tweets as disaster-related or not",
+    techStack: ["Python", "Hugging Face", "Keras", "DistilBERT", "PyTorch"],
+    thumbnail: "/Disaster Tweets Classification.png",
+    githubUrl: "https://github.com/your-username/disaster-tweet-classification"
   },
   {
     id: 2,
@@ -52,17 +53,41 @@ const dataAnalystProjects = [
   },
   {
     id: 3,
-    title: "Disaster Tweet Classification",
-    description: "A machine learning model that classifies tweets as disaster-related or not",
-    techStack: ["Python", "Hugging Face", "Keras", "DistilBERT", "PyTorch"],
-    thumbnail: "/Disaster Tweets Classification.png",
-    githubUrl: "https://github.com/your-username/disaster-tweet-classification"
+    title: "Hotel Booking Analytics",
+    description: "Power BI dashboard that provides insights into hotel bookings, revenue, and key performance metrics",
+    techStack: ["Power BI", "MySQL", "Excel"],
+    thumbnail: "/Hotel Booking Analytics.png",
+    githubUrl: "https://github.com/your-username/hotel-booking-analytics"
   }
 ];
 
 export default function ProjectsPage() {
+  const containerRef = useRef<HTMLDivElement | null>(null);
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    const el = containerRef.current;
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    el.style.setProperty("--mouse-x", `${x}px`);
+    el.style.setProperty("--mouse-y", `${y}px`);
+  };
+
+  const handleMouseLeave = () => {
+    const el = containerRef.current;
+    if (!el) return;
+    el.style.setProperty("--mouse-x", `-9999px`);
+    el.style.setProperty("--mouse-y", `-9999px`);
+  };
+
   return (
-    <div className="min-h-screen grid-background scan-lines">
+    <div
+      ref={containerRef}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      className="min-h-screen grid-background glow-cursor scan-lines"
+    >
       <div className="container mx-auto px-6 py-12">
         {/* Header */}
         <div className="mb-12">
