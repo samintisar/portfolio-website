@@ -14,7 +14,7 @@ const fullStackProjects = [
     description: "A FastAPI service for AI voice agent integration with OpenDental practice management system",
     techStack: ["Python", "FastAPI", "VAPI", "React", "Node.js", "OpenDental API"],
     thumbnail: "/CrownCall.png",
-    githubUrl: "https://github.com/your-username/ai-receptionist"
+    githubUrl: "https://github.com/samintisar/crowncall-website"
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ const fullStackProjects = [
     description: "An AI-powered study assistant app that integrates your resources to generate personalized study materials",
     techStack: ["React", "Next.js", "LangChain", "OpenAI API", "Supabase"],
     thumbnail: "/SolomindLM.png",
-    githubUrl: "https://github.com/your-username/solomindlm"
+    githubUrl: "https://github.com/samintisar/learning-app"
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const fullStackProjects = [
     description: "A web application that generates leads for a business using Google Maps API and web scraping",
     techStack: ["Svelte", "Python", "Google Maps API", "BeautifulSoup"],
     thumbnail: "/Lead Generation App.png",
-    githubUrl: "https://github.com/your-username/lead-generation-app"
+    githubUrl: "https://github.com/samintisar/lma"
   }
 ];
 
@@ -41,7 +41,7 @@ const dataAnalystProjects = [
     description: "A machine learning model that classifies tweets as disaster-related or not",
     techStack: ["Python", "Hugging Face", "Keras", "DistilBERT", "PyTorch"],
     thumbnail: "/Disaster Tweets Classification.png",
-    githubUrl: "https://github.com/your-username/disaster-tweet-classification"
+    githubUrl: "https://github.com/samintisar/natural-language-processing"
   },
   {
     id: 2,
@@ -49,7 +49,7 @@ const dataAnalystProjects = [
     description: "Machine learning to predict whether a breast tumor is malignant or benign",
     techStack: ["Python", "Scikit-learn", "Pandas", "Seaborn", "Matplotlib"],
     thumbnail: "/Breast Cancer Prediction.png",
-    githubUrl: "https://github.com/your-username/breast-cancer-prediction"
+    githubUrl: "https://github.com/samintisar/breast-cancer-diagnosis-ml"
   },
   {
     id: 3,
@@ -57,7 +57,7 @@ const dataAnalystProjects = [
     description: "Power BI dashboard that provides insights into hotel bookings, revenue, and key performance metrics",
     techStack: ["Power BI", "MySQL", "Excel"],
     thumbnail: "/Hotel Booking Analytics.png",
-    githubUrl: "https://github.com/your-username/hotel-booking-analytics"
+    githubUrl: "https://github.com/samintisar/Hospitality_Domain_Analysis_Dashboard"
   }
 ];
 

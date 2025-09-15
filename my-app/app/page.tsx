@@ -87,17 +87,7 @@ export default function Home() {
         </div>
       </section>
 
-      
-      {/* Footer */}
-      <footer
-        className={`fixed bottom-0 left-0 right-0 z-50 border-t border-primary bg-background/80 backdrop-blur-sm transform transition-transform duration-200 will-change-transform ${showFooter ? "translate-y-0" : "translate-y-full"}`}
-      >
-        <div className="container mx-auto px-6 py-8 text-center">
-          <p className="text-muted-foreground">
-            © 2024 CYBER.DEV - Neural Network Active
-          </p>
-        </div>
-      </footer>
+
     </div>
   );
 }
