@@ -45,7 +45,9 @@ export default function Home() {
             THE FUTURE
           </h1>
           <p className="text-xl md:text-2xl mb-12 text-muted-foreground max-w-3xl mx-auto">
-            Samin Intisar | Full-Stack Engineer | Digital Architect
+            <Link href="/skills" className="transition-colors hover:text-primary">
+              Samin Intisar | Full-Stack Engineer | Data Analyst
+            </Link>
           </p>
           <div className="flex gap-6 justify-center flex-wrap">
             <Link href="/projects">

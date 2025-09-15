@@ -4,27 +4,28 @@ import { Button } from "@/components/retroui/Button";
 import { Card } from "@/components/retroui/Card";
 import { Badge } from "@/components/retroui/Badge";
 import Link from "next/link";
+import Image from "next/image";
 
 const fullStackProjects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    description: "A full-stack e-commerce solution with React frontend and Node.js backend, featuring user authentication, payment processing, and inventory management.",
-    techStack: ["React", "Node.js", "MongoDB", "Express", "Stripe API"],
-    thumbnail: "/api/placeholder/400/250"
+    title: "AI Receptionist for Dental Clinics",
+    description: "A FastAPI service for AI voice agent integration with OpenDental practice management system",
+    techStack: ["Python", "FastAPI", "VAPI", "React", "Node.js", "OpenDental API"],
+    thumbnail: "/CrownCall.png"
   },
   {
     id: 2,
-    title: "Task Management App",
-    description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-    techStack: ["TypeScript", "Next.js", "PostgreSQL", "Socket.io", "Tailwind CSS"],
+    title: "SolomindLM (In Progress)",
+    description: "An AI-powered study assistant app that integrates your resources to generate personalized study materials",
+    techStack: ["React", "Next.js", "LangChain", "OpenAI API", "Supabase"],
     thumbnail: "/api/placeholder/400/250"
   },
   {
     id: 3,
-    title: "Social Media Dashboard",
-    description: "Analytics dashboard for social media management with data visualization, scheduling, and multi-platform integration.",
-    techStack: ["React", "D3.js", "Firebase", "Chart.js", "Material UI"],
+    title: "Lead Generation App",
+    description: "A web application that generates leads for a business using Google Maps API and web scraping",
+    techStack: ["Svelte", "Python", "Google Maps API", "BeautifulSoup"],
     thumbnail: "/api/placeholder/400/250"
   }
 ];
@@ -32,23 +33,23 @@ const fullStackProjects = [
 const dataAnalystProjects = [
   {
     id: 1,
-    title: "Sales Analytics Dashboard",
-    description: "Interactive dashboard for sales data analysis with predictive modeling and real-time reporting capabilities.",
-    techStack: ["Python", "Pandas", "Plotly", "Flask", "SQL"],
-    thumbnail: "/api/placeholder/400/250"
+    title: "Hotel Booking Analytics",
+    description: "Power BI dashboard that provides insights into hotel bookings, revenue, and key performance metrics",
+    techStack: ["Power BI", "MySQL", "Excel"],
+    thumbnail: "/Hotel Booking Analytics.png"
   },
   {
     id: 2,
-    title: "Customer Segmentation Model",
-    description: "Machine learning model for customer segmentation using clustering algorithms and behavioral analysis.",
-    techStack: ["Python", "Scikit-learn", "K-Means", "Tableau", "NumPy"],
-    thumbnail: "/api/placeholder/400/250"
+    title: "Breast Cancer Prediction",
+    description: "Machine learning to predict whether a breast tumor is malignant or benign",
+    techStack: ["Python", "Scikit-learn", "Pandas", "Seaborn", "Matplotlib"],
+    thumbnail: "/Breast Cancer Prediction.png"
   },
   {
     id: 3,
-    title: "Financial Data Pipeline",
-    description: "Automated data pipeline for financial market analysis with real-time data processing and visualization.",
-    techStack: ["Python", "Apache Spark", "AWS", "Kafka", "Power BI"],
+    title: "Disaster Tweet Classification",
+    description: "A machine learning model that classifies tweets as disaster-related or not",
+    techStack: ["Python", "Hugging Face", "Keras", "DistilBERT", "PyTorch"],
     thumbnail: "/api/placeholder/400/250"
   }
 ];
@@ -75,10 +76,20 @@ export default function ProjectsPage() {
             {fullStackProjects.map((project) => (
               <Card key={project.id} className="hover:shadow-xl transition-all duration-300 border-primary">
                 <Card.Header className="p-4">
-                  <div className="aspect-video bg-muted rounded-md mb-4 flex items-center justify-center">
-                    <div className="text-muted-foreground text-sm">
-                      {project.thumbnail}
-                    </div>
+                  <div className="aspect-video bg-muted rounded-md mb-4 overflow-hidden">
+                    {project.thumbnail ? (
+                      <Image
+                        src={project.thumbnail}
+                        alt={`${project.title} thumbnail`}
+                        width={400}
+                        height={225}
+                        className="h-full w-full object-cover"
+                      />
+                    ) : (
+                      <div className="h-full w-full flex items-center justify-center text-muted-foreground text-sm">
+                        No image
+                      </div>
+                    )}
                   </div>
                   <Card.Title className="text-xl font-bold text-primary">
                     {project.title}
@@ -110,10 +121,20 @@ export default function ProjectsPage() {
             {dataAnalystProjects.map((project) => (
               <Card key={project.id} className="hover:shadow-xl transition-all duration-300 border-primary">
                 <Card.Header className="p-4">
-                  <div className="aspect-video bg-muted rounded-md mb-4 flex items-center justify-center">
-                    <div className="text-muted-foreground text-sm">
-                      {project.thumbnail}
-                    </div>
+                  <div className="aspect-video bg-muted rounded-md mb-4 overflow-hidden">
+                    {project.thumbnail ? (
+                      <Image
+                        src={project.thumbnail}
+                        alt={`${project.title} thumbnail`}
+                        width={400}
+                        height={225}
+                        className="h-full w-full object-cover"
+                      />
+                    ) : (
+                      <div className="h-full w-full flex items-center justify-center text-muted-foreground text-sm">
+                        No image
+                      </div>
+                    )}
                   </div>
                   <Card.Title className="text-xl font-bold text-primary">
                     {project.title}
