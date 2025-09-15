@@ -7,8 +7,8 @@ import Link from "next/link";
 
 const skillSections = [
   {
-    title: "Languages",
-    items: ["TypeScript", "JavaScript", "Python", "SQL", "HTML", "CSS"],
+    title: "Programming Languages",
+    items: ["JavaScript", "Python", "SQL", "HTML", "CSS", "TypeScript"],
   },
   {
     title: "Frameworks & Libraries",
@@ -31,7 +31,7 @@ const skillSections = [
   },
   {
     title: "Data & Analytics",
-    items: ["Pandas", "NumPy", "scikit-learn", "Plotly", "Power BI", "Tableau"],
+    items: ["Pandas", "NumPy", "scikit-learn", "PyTorch", "Power BI", "Tableau"],
   },
   {
     title: "Tools",
@@ -96,11 +96,7 @@ export default function SkillsPage() {
               <Card.Header>
                 <Card.Title className="text-primary">{section.title}</Card.Title>
                 <Card.Description>
-                  {section.title === "Data & Analytics"
-                    ? "Data wrangling, modeling, and visualization"
-                    : section.title === "Cloud & DevOps"
-                    ? "Deployments, automation, and infrastructure"
-                    : undefined}
+                  {undefined}
                 </Card.Description>
               </Card.Header>
               <Card.Content>

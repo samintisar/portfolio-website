@@ -12,21 +12,24 @@ const fullStackProjects = [
     title: "AI Receptionist for Dental Clinics",
     description: "A FastAPI service for AI voice agent integration with OpenDental practice management system",
     techStack: ["Python", "FastAPI", "VAPI", "React", "Node.js", "OpenDental API"],
-    thumbnail: "/CrownCall.png"
+    thumbnail: "/CrownCall.png",
+    githubUrl: "https://github.com/your-username/ai-receptionist"
   },
   {
     id: 2,
     title: "SolomindLM (In Progress)",
     description: "An AI-powered study assistant app that integrates your resources to generate personalized study materials",
     techStack: ["React", "Next.js", "LangChain", "OpenAI API", "Supabase"],
-    thumbnail: "/api/placeholder/400/250"
+    thumbnail: "/api/placeholder/400/250",
+    githubUrl: "https://github.com/your-username/solomindlm"
   },
   {
     id: 3,
     title: "Lead Generation App",
     description: "A web application that generates leads for a business using Google Maps API and web scraping",
     techStack: ["Svelte", "Python", "Google Maps API", "BeautifulSoup"],
-    thumbnail: "/api/placeholder/400/250"
+    thumbnail: "/api/placeholder/400/250",
+    githubUrl: "https://github.com/your-username/lead-generation-app"
   }
 ];
 
@@ -36,21 +39,24 @@ const dataAnalystProjects = [
     title: "Hotel Booking Analytics",
     description: "Power BI dashboard that provides insights into hotel bookings, revenue, and key performance metrics",
     techStack: ["Power BI", "MySQL", "Excel"],
-    thumbnail: "/Hotel Booking Analytics.png"
+    thumbnail: "/Hotel Booking Analytics.png",
+    githubUrl: "https://github.com/your-username/hotel-booking-analytics"
   },
   {
     id: 2,
     title: "Breast Cancer Prediction",
     description: "Machine learning to predict whether a breast tumor is malignant or benign",
     techStack: ["Python", "Scikit-learn", "Pandas", "Seaborn", "Matplotlib"],
-    thumbnail: "/Breast Cancer Prediction.png"
+    thumbnail: "/Breast Cancer Prediction.png",
+    githubUrl: "https://github.com/your-username/breast-cancer-prediction"
   },
   {
     id: 3,
     title: "Disaster Tweet Classification",
     description: "A machine learning model that classifies tweets as disaster-related or not",
     techStack: ["Python", "Hugging Face", "Keras", "DistilBERT", "PyTorch"],
-    thumbnail: "/Disaster Tweets Classification.png"
+    thumbnail: "/Disaster Tweets Classification.png",
+    githubUrl: "https://github.com/your-username/disaster-tweet-classification"
   }
 ];
 
@@ -74,7 +80,8 @@ export default function ProjectsPage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {fullStackProjects.map((project) => (
-              <Card key={project.id} className="hover:shadow-xl transition-all duration-300 border-primary">
+              <Link key={project.id} href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                <Card className="hover:shadow-xl transition-all duration-300 border-primary cursor-pointer hover:border-secondary">
                 <Card.Header className="p-4">
                   <div className="aspect-video bg-muted rounded-md mb-4 overflow-hidden">
                     {project.thumbnail ? (
@@ -108,6 +115,7 @@ export default function ProjectsPage() {
                   </div>
                 </Card.Content>
               </Card>
+              </Link>
             ))}
           </div>
         </section>
@@ -119,7 +127,8 @@ export default function ProjectsPage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {dataAnalystProjects.map((project) => (
-              <Card key={project.id} className="hover:shadow-xl transition-all duration-300 border-primary">
+              <Link key={project.id} href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                <Card className="hover:shadow-xl transition-all duration-300 border-primary cursor-pointer hover:border-secondary">
                 <Card.Header className="p-4">
                   <div className="aspect-video bg-muted rounded-md mb-4 overflow-hidden">
                     {project.thumbnail ? (
@@ -153,6 +162,7 @@ export default function ProjectsPage() {
                   </div>
                 </Card.Content>
               </Card>
+              </Link>
             ))}
           </div>
         </section>
