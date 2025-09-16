@@ -48,9 +48,9 @@ export default function Home() {
       className="min-h-[110vh] grid-background glow-cursor scan-lines"
     >
       {/* Hero Section */}
-      <section className="flex items-center justify-center px-6" style={{ height: 'calc(110vh - 60px)' }}>
+      <section className="flex items-center justify-center px-6" style={{ height: 'calc(110vh - 60px)' }} aria-labelledby="hero-heading">
         <div className="container mx-auto text-center">
-          <h1 className="text-6xl md:text-8xl font-head mb-8 text-primary text-render-precision leading-tight tracking-tighter font-black text-shadow neon-glow-subtle">
+          <h1 id="hero-heading" className="text-6xl md:text-8xl font-head mb-8 text-primary text-render-precision leading-tight tracking-tighter font-black text-shadow neon-glow-subtle">
             WELCOME TO
             <br />
             THE FUTURE
@@ -60,22 +60,23 @@ export default function Home() {
               href="/skills"
               className="transition-colors hover:text-secondary focus:text-secondary focus-cyberpunk rounded-sm px-1 py-0.5"
               tabIndex={0}
+              aria-label="Learn more about Samin Intisar's skills and experience"
             >
               Samin Intisar | Full-Stack Engineer | Data Analyst
             </Link>
           </p>
-          <div className="flex gap-6 justify-center flex-wrap">
-            <Link href="/projects">
+          <nav className="flex gap-6 justify-center flex-wrap" aria-label="Main navigation">
+            <Link href="/projects" aria-label="View my portfolio projects">
               <Button className="text-lg px-8 py-4 cyber-border font-bold text-render-legible tracking-wide text-shadow cyber-focus cyber-button">
                 VIEW PROJECTS
               </Button>
             </Link>
-            <a href="/Samin_Intisar_Resume_v4.pdf" download="Samin_Intisar_Resume_v4.pdf">
+            <a href="/Samin_Intisar_Resume_v4.pdf" download="Samin_Intisar_Resume_v4.pdf" aria-label="Download Samin Intisar's resume">
               <Button variant="secondary" className="text-lg px-8 py-4 cyber-focus cyber-button cyber-button-secondary">
                 DOWNLOAD CV
               </Button>
             </a>
-          </div>
+          </nav>
         </div>
       </section>
 

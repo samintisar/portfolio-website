@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://samin-intisar-portfolio-7mlij.ondigitalocean.app/sitemap.xml
+
+# Allow all search engines to crawl the site
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Disallow crawling of any admin or private areas if they exist
+Disallow: /api/
+Disallow: /_next/
+
+# Allow crawling of important pages
+Allow: /
+Allow: /projects
+Allow: /skills
+Allow: /Samin_Intisar_Resume_v4.pdf

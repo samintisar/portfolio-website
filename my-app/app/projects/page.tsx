@@ -10,11 +10,11 @@ import { useRef } from "react";
 const fullStackProjects = [
   {
     id: 1,
-    title: "AI Receptionist for Dental Clinics",
-    description: "A FastAPI service for AI voice agent integration with OpenDental practice management system",
-    techStack: ["Python", "FastAPI", "VAPI", "React", "Node.js", "OpenDental API"],
-    thumbnail: "/CrownCall.png",
-    githubUrl: "https://github.com/samintisar/crowncall-website"
+    title: "Lead Generation App",
+    description: "A web application that generates leads for a business using Google Maps API and web scraping",
+    techStack: ["Svelte", "Python", "Google Maps API", "BeautifulSoup"],
+    thumbnail: "/Lead Generation App.png",
+    githubUrl: "https://google-maps-lead-generation-yffq.vercel.app/"
   },
   {
     id: 2,
@@ -26,11 +26,11 @@ const fullStackProjects = [
   },
   {
     id: 3,
-    title: "Lead Generation App",
-    description: "A web application that generates leads for a business using Google Maps API and web scraping",
-    techStack: ["Svelte", "Python", "Google Maps API", "BeautifulSoup"],
-    thumbnail: "/Lead Generation App.png",
-    githubUrl: "https://github.com/samintisar/lma"
+    title: "AI Receptionist for Dental Clinics",
+    description: "A FastAPI service for AI voice agent integration with OpenDental practice management system",
+    techStack: ["Python", "FastAPI", "VAPI", "React", "Node.js", "OpenDental API"],
+    thumbnail: "/CrownCall.png",
+    githubUrl: "https://github.com/samintisar/crowncall-website"
   }
 ];
 
@@ -112,7 +112,9 @@ export default function ProjectsPage() {
                     {project.thumbnail ? (
                       <Image
                         src={project.thumbnail}
-                        alt={`${project.title} thumbnail`}
+                        alt={`${project.title} - ${project.description.substring(0, 100)}...`}
+                        loading="lazy"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         width={400}
                         height={225}
                         className="h-full w-full object-cover"
@@ -159,7 +161,9 @@ export default function ProjectsPage() {
                     {project.thumbnail ? (
                       <Image
                         src={project.thumbnail}
-                        alt={`${project.title} thumbnail`}
+                        alt={`${project.title} - ${project.description.substring(0, 100)}...`}
+                        loading="lazy"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         width={400}
                         height={225}
                         className="h-full w-full object-cover"
