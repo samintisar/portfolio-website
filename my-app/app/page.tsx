@@ -71,7 +71,7 @@ export default function Home() {
                 VIEW PROJECTS
               </Button>
             </Link>
-            <a href="/Samin_Intisar_Resume_v4.pdf" download="Samin_Intisar_Resume_v4.pdf" aria-label="Download Samin Intisar's resume">
+            <a href="/Samin_Intisar_AI_ML_Engineer_Resume.pdf" download="Samin_Intisar_AI_ML_Engineer_Resume.pdf" aria-label="Download Samin Intisar's resume">
               <Button variant="secondary" className="text-lg px-8 py-4 cyber-focus cyber-button cyber-button-secondary">
                 DOWNLOAD CV
               </Button>

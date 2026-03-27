@@ -10,19 +10,19 @@ import { useRef } from "react";
 const fullStackProjects = [
   {
     id: 1,
+    title: "SolomindLM",
+    description: "An AI-powered study assistant app that integrates your resources to generate personalized study materials",
+    techStack: ["React", "Next.js", "LangChain", "OpenAI API", "Convex"],
+    thumbnail: "/SolomindLM.png",
+    githubUrl: "https://www.solomindlm.com/"
+  },
+  {
+    id: 2,
     title: "Lead Generation App",
     description: "A web application that generates leads for a business using Google Maps API and web scraping",
     techStack: ["Svelte", "Python", "Google Maps API", "BeautifulSoup"],
     thumbnail: "/Lead Generation App.png",
-    githubUrl: "https://google-maps-lead-generation-yffq.vercel.app/"
-  },
-  {
-    id: 2,
-    title: "SolomindLM (In Progress)",
-    description: "An AI-powered study assistant app that integrates your resources to generate personalized study materials",
-    techStack: ["React", "Next.js", "LangChain", "OpenAI API", "Supabase"],
-    thumbnail: "/SolomindLM.png",
-    githubUrl: "https://github.com/samintisar/learning-app"
+    githubUrl: "https://google-maps-lead-generation.vercel.app/"
   },
   {
     id: 3,

@@ -19,4 +19,4 @@ Disallow: /_next/
 Allow: /
 Allow: /projects
 Allow: /skills
-Allow: /Samin_Intisar_Resume_v4.pdf
+Allow: /Samin_Intisar_AI_ML_Engineer_Resume.pdf
