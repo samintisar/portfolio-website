@@ -29,14 +29,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://samin-intisar-portfolio-7mlij.ondigitalocean.app"),
+  metadataBase: new URL("https://samintisar.vercel.app"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "Samin Intisar - Full-Stack Developer & Data Analyst",
     description: "Experienced Full-Stack Developer and Data Analyst specializing in React, Next.js, Python, and Machine Learning. View projects including lead generation apps, AI assistants, and data analytics dashboards.",
-    url: "https://samin-intisar-portfolio-7mlij.ondigitalocean.app",
+    url: "https://samintisar.vercel.app",
     siteName: "Samin Intisar Portfolio",
     images: [
       {
@@ -85,7 +85,7 @@ export default function RootLayout({
               "name": "Samin Intisar",
               "jobTitle": ["Full-Stack Developer", "Data Analyst"],
               "description": "Experienced Full-Stack Developer and Data Analyst specializing in React, Next.js, Python, and Machine Learning",
-              "url": "https://samin-intisar-portfolio-7mlij.ondigitalocean.app",
+              "url": "https://samintisar.vercel.app",
               "sameAs": [
                 "https://github.com/samintisar",
                 "https://linkedin.com/in/samin-intisar"
