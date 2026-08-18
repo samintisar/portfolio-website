@@ -18,9 +18,9 @@ const space = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Samin Intisar - Full-Stack Developer & Data Analyst",
-  description: "Experienced Full-Stack Developer and Data Analyst specializing in React, Next.js, Python, and Machine Learning. View projects including lead generation apps, AI assistants, and data analytics dashboards.",
-  keywords: ["Full-Stack Developer", "Data Analyst", "React", "Next.js", "Python", "Machine Learning", "Web Development", "Data Analytics", "Portfolio"],
+  title: "Samin Intisar - AI Engineer",
+  description: "AI Engineer specializing in RAG pipelines, LangGraph agents, and production LLM applications. View projects including SolomindLM, voice agents, and applied machine learning.",
+  keywords: ["AI Engineer", "LangChain", "LangGraph", "RAG", "Python", "TypeScript", "Machine Learning", "LLM", "Portfolio"],
   authors: [{ name: "Samin Intisar" }],
   creator: "Samin Intisar",
   publisher: "Samin Intisar",
@@ -34,8 +34,8 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Samin Intisar - Full-Stack Developer & Data Analyst",
-    description: "Experienced Full-Stack Developer and Data Analyst specializing in React, Next.js, Python, and Machine Learning. View projects including lead generation apps, AI assistants, and data analytics dashboards.",
+    title: "Samin Intisar - AI Engineer",
+    description: "AI Engineer specializing in RAG pipelines, LangGraph agents, and production LLM applications. View projects including SolomindLM, voice agents, and applied machine learning.",
     url: "https://samintisar.vercel.app",
     siteName: "Samin Intisar Portfolio",
     images: [
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Samin Intisar - Full-Stack Developer & Data Analyst",
+        alt: "Samin Intisar - AI Engineer",
       },
     ],
     locale: "en_US",
@@ -51,8 +51,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Samin Intisar - Full-Stack Developer & Data Analyst",
-    description: "Experienced Full-Stack Developer and Data Analyst specializing in React, Next.js, Python, and Machine Learning.",
+    title: "Samin Intisar - AI Engineer",
+    description: "AI Engineer specializing in RAG pipelines, LangGraph agents, and production LLM applications.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -83,8 +83,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Person",
               "name": "Samin Intisar",
-              "jobTitle": ["Full-Stack Developer", "Data Analyst"],
-              "description": "Experienced Full-Stack Developer and Data Analyst specializing in React, Next.js, Python, and Machine Learning",
+              "jobTitle": ["AI Engineer"],
+              "description": "AI Engineer specializing in RAG pipelines, LangGraph agents, and production LLM applications",
               "url": "https://samintisar.vercel.app",
               "sameAs": [
                 "https://github.com/samintisar",
@@ -97,18 +97,19 @@ export default function RootLayout({
                 "JavaScript",
                 "TypeScript",
                 "Machine Learning",
-                "Data Analytics",
-                "Web Development",
-                "Full-Stack Development"
+                "RAG",
+                "LangGraph",
+                "LangChain",
+                "LLM Applications"
               ],
               "hasOccupation": {
                 "@type": "Occupation",
-                "name": "Full-Stack Developer",
+                "name": "AI Engineer",
                 "occupationLocation": {
                   "@type": "Place",
                   "name": "Remote"
                 },
-                "skills": ["React", "Next.js", "Python", "JavaScript", "TypeScript", "Node.js", "SQL"]
+                "skills": ["Python", "TypeScript", "LangChain", "LangGraph", "RAG", "PyTorch", "Convex"]
               },
               "alumniOf": {
                 "@type": "Organization",

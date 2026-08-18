@@ -8,31 +8,48 @@ import { useRef } from "react";
 
 const skillSections = [
   {
+    title: "AI",
+    items: [
+      "LangChain",
+      "LangGraph",
+      "RAG Pipelines",
+      "Vector Embeddings",
+      "Cross-Encoder Reranking",
+      "Prompt Engineering",
+      "Together AI",
+      "Cohere",
+    ],
+  },
+  {
+    title: "Machine Learning",
+    items: [
+      "Pandas",
+      "NumPy",
+      "scikit-learn",
+      "PyTorch",
+      "TensorFlow",
+      "Hugging Face",
+    ],
+  },
+  {
     title: "Programming Languages",
     items: ["Python", "SQL", "HTML/CSS", "R", "JavaScript", "TypeScript"],
   },
   {
     title: "Frameworks & Libraries",
-    items: [
-      "React",
-      "Next.js",
-      "Node.js",
-      "Svelte",
-      "Tailwind CSS",
-      "LangChain",
-    ],
+    items: ["React", "Next.js", "Node.js", "Svelte", "Tailwind CSS"],
+  },
+  {
+    title: "Backend",
+    items: ["FastAPI", "Streamlit", "Convex"],
   },
   {
     title: "Databases",
-    items: ["PostgreSQL", "MongoDB", "SQLite", "Firebase"],
+    items: ["PostgreSQL", "MySQL", "MongoDB", "SQLite", "Firebase", "Supabase"],
   },
   {
     title: "Cloud & DevOps",
     items: ["AWS", "Docker", "Git", "Vercel", "CI/CD"],
-  },
-  {
-    title: "Machine Learning",
-    items: ["Pandas", "NumPy", "scikit-learn", "PyTorch", "TensorFlow", "Hugging Face"],
   },
   {
     title: "Data Analytics",
@@ -53,24 +70,36 @@ const skillLevels: Record<string, number> = {
   Svelte: 69,
   "Tailwind CSS": 79,
   LangChain: 88,
+  LangGraph: 86,
+  FastAPI: 84,
+  Streamlit: 78,
   PostgreSQL: 87,
+  MySQL: 82,
   MongoDB: 78,
   SQLite: 82,
   Firebase: 72,
+  Convex: 86,
+  Supabase: 75,
   AWS: 70,
   Docker: 95,
   Vercel: 88,
   "CI/CD": 74,
+  "Together AI": 72,
+  Cohere: 70,
   Pandas: 92,
   NumPy: 88,
   "scikit-learn": 75,
   PyTorch: 72,
+  TensorFlow: 72,
+  "Hugging Face": 82,
+  "RAG Pipelines": 88,
+  "Vector Embeddings": 84,
+  "Cross-Encoder Reranking": 80,
+  "Prompt Engineering": 85,
   "Power BI": 89,
   Tableau: 84,
   Git: 92,
   Excel: 65,
-  TensorFlow: 72,
-  "Hugging Face": 82,
   Databricks: 72,
 };
 
@@ -119,9 +148,6 @@ export default function SkillsPage() {
             <Card key={section.title} className="border-primary hover:shadow-xl transition-all duration-300">
               <Card.Header>
                 <Card.Title className="text-primary">{section.title}</Card.Title>
-                <Card.Description>
-                  {undefined}
-                </Card.Description>
               </Card.Header>
               <Card.Content>
                 {section.items.map((item) => {

@@ -62,7 +62,7 @@ export default function Home() {
               tabIndex={0}
               aria-label="Learn more about Samin Intisar's skills and experience"
             >
-              Samin Intisar | Full-Stack Engineer | Data Analyst
+              Samin Intisar | AI Engineer
             </Link>
           </p>
           <nav className="flex gap-6 justify-center flex-wrap" aria-label="Main navigation">
@@ -71,7 +71,7 @@ export default function Home() {
                 VIEW PROJECTS
               </Button>
             </Link>
-            <a href="/Samin_Intisar_AI_ML_Engineer_Resume.pdf" download="Samin_Intisar_AI_ML_Engineer_Resume.pdf" aria-label="Download Samin Intisar's resume">
+            <a href="/Samin_Intisar_AI_Engineer_Resume.pdf" download="Samin_Intisar_AI_Engineer_Resume.pdf" aria-label="Download Samin Intisar's resume">
               <Button variant="secondary" className="text-lg px-8 py-4 cyber-focus cyber-button cyber-button-secondary">
                 DOWNLOAD CV
               </Button>
