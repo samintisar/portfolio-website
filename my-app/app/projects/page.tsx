@@ -15,7 +15,7 @@ type Project = {
   githubUrl?: string;
 };
 
-const fullStackProjects: Project[] = [
+const aiEngineerProjects: Project[] = [
   {
     title: "SolomindLM",
     description: "An AI-powered study assistant app that integrates your resources to generate personalized study materials",
@@ -24,28 +24,21 @@ const fullStackProjects: Project[] = [
     githubUrl: "https://www.solomindlm.com/"
   },
   {
-    title: "Lead Generation App",
-    description: "A web application that generates leads for a business using Google Maps API and web scraping",
-    techStack: ["Svelte", "Python", "Google Maps API", "BeautifulSoup"],
-    thumbnail: "/Lead Generation App.png",
-    githubUrl: "https://google-maps-lead-generation.vercel.app/"
-  },
-  {
     title: "AI Receptionist for Dental Clinics",
     description: "A FastAPI service for AI voice agent integration with OpenDental practice management system",
     techStack: ["Python", "FastAPI", "VAPI", "React", "Node.js", "OpenDental API"],
     thumbnail: "/CrownCall.png",
     githubUrl: "https://github.com/samintisar/crowncall-website"
-  },
+  }
+];
+
+const appliedMlProjects: Project[] = [
   {
     title: "Quant Portfolio System",
     description: "End-to-end portfolio optimization with mean-variance, CVaR, and Black-Litterman models, walk-forward backtests, and FastAPI endpoints",
     techStack: ["Python", "CVXPY", "scikit-learn", "FastAPI"],
     githubUrl: "https://github.com/samintisar/quant-portfolio-system"
-  }
-];
-
-const dataAnalystProjects: Project[] = [
+  },
   {
     title: "Disaster Tweet Classification",
     description: "A machine learning model that classifies tweets as disaster-related or not",
@@ -70,7 +63,10 @@ const dataAnalystProjects: Project[] = [
     title: "Employee Attrition Prediction",
     description: "Lasso regression on HR data from 4,653 employees to identify salary, benching, and experience as key attrition drivers",
     techStack: ["R", "MySQL", "Lasso Regression"]
-  },
+  }
+];
+
+const analyticsProjects: Project[] = [
   {
     title: "Return of Service in BC",
     description: "UBC capstone statistical consulting for faculty physicians on IMG retention policy, using logistic and ordinal regression on 80+ survey responses",
@@ -82,6 +78,13 @@ const dataAnalystProjects: Project[] = [
     techStack: ["Power BI", "MySQL", "Excel"],
     thumbnail: "/Hotel Booking Analytics.png",
     githubUrl: "https://github.com/samintisar/Hospitality_Domain_Analysis_Dashboard"
+  },
+  {
+    title: "Lead Generation App",
+    description: "A web application that generates leads for a business using Google Maps API and web scraping",
+    techStack: ["Svelte", "Python", "Google Maps API", "BeautifulSoup"],
+    thumbnail: "/Lead Generation App.png",
+    githubUrl: "https://google-maps-lead-generation.vercel.app/"
   }
 ];
 
@@ -179,19 +182,31 @@ export default function ProjectsPage() {
             AI Engineer
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {fullStackProjects.map((project) => (
+            {aiEngineerProjects.map((project) => (
               <ProjectCard key={project.title} project={project} />
             ))}
           </div>
         </section>
 
         {/* Applied ML Section */}
-        <section>
+        <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-head mb-8 text-primary border-b-2 border-primary pb-2">
             Applied ML
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {dataAnalystProjects.map((project) => (
+            {appliedMlProjects.map((project) => (
+              <ProjectCard key={project.title} project={project} />
+            ))}
+          </div>
+        </section>
+
+        {/* Analytics Section */}
+        <section>
+          <h2 className="text-3xl md:text-4xl font-head mb-8 text-primary border-b-2 border-primary pb-2">
+            Analytics
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {analyticsProjects.map((project) => (
               <ProjectCard key={project.title} project={project} />
             ))}
           </div>
