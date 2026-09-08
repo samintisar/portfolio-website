@@ -29,6 +29,12 @@ const aiEngineerProjects: Project[] = [
     techStack: ["Python", "FastAPI", "VAPI", "React", "Node.js", "OpenDental API"],
     thumbnail: "/CrownCall.png",
     githubUrl: "https://github.com/samintisar/crowncall-website"
+  },
+  {
+    title: "SignalBench",
+    description: "An evaluation-first research console that uses LLMs to extract structured market signals from SEC filings, validate them, and test reproducible strategies.",
+    techStack: ["Python", "FastAPI", "PostgreSQL", "Together AI", "Pydantic"],
+    githubUrl: "https://github.com/samintisar/macrocite"
   }
 ];
 
