@@ -113,7 +113,8 @@ export default function RootLayout({
               },
               "alumniOf": {
                 "@type": "Organization",
-                "name": "Educational Institution"
+                "name": "The University of British Columbia",
+                "url": "https://www.ubc.ca/"
               }
             })
           }}

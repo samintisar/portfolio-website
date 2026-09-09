@@ -64,6 +64,9 @@ export default function Home() {
             >
               Samin Intisar | AI Engineer
             </Link>
+            <span className="block mt-3 text-base md:text-lg text-secondary">
+              BSc in Statistics, The University of British Columbia
+            </span>
           </p>
           <nav className="flex gap-6 justify-center flex-wrap" aria-label="Main navigation">
             <Link href="/projects" aria-label="View my portfolio projects">
